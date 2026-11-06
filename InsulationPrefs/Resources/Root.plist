@@ -40,9 +40,21 @@
 			<key>footerText</key>
 			<string>我也不知道这个功能有什么用，但要就支持一下吧。</string>
 		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSegmentCell</string>
+\t\t<dict>
+\t\t\t<key>cell</key>
+\t\t\t<string>PSSwitchCell</string>
+\t\t\t<key>default</key>
+\t\t\t<false/>
+\t\t\t<key>defaults</key>
+\t\t\t<string>com.be-huge.insulation-prefs</string>
+\t\t\t<key>key</key>
+\t\t\t<string>chargingNativeThermalEnabled</string>
+\t\t\t<key>label</key>
+\t\t\t<string>充电电池原生温控</string>
+\t\t</dict>
+\t\t<dict>
+\t\t\t<key>cell</key>
+\t\t\t<string>PSSegmentCell</string>
 			<key>default</key>
 			<string>nominal</string>
 			<key>defaults</key>

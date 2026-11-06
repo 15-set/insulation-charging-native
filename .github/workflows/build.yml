@@ -1,0 +1,25 @@
+name: build
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Theos (roothide)
+        run: |
+          git clone --recursive https://github.com/roothide/theos.git "$RUNNER_TEMP/theos"
+          echo "THEOS=$RUNNER_TEMP/theos" >> "$GITHUB_ENV"
+
+      - name: Build package
+        run: make clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=roothide
+
+      - name: Upload deb
+        uses: actions/upload-artifact@v4
+        with:
+          name: insulation-deb
+          path: packages/*.deb

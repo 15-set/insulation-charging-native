@@ -31,7 +31,7 @@ class RootListController: PSListController {
         prefs.write(toFile: prefsPlistPath, atomically: true);
 
         let keyString = key as! String;
-        if keyString == "thermalPuppetValue" {
+        if keyString == "thermalPuppetValue" || keyString == "chargingNativeThermalEnabled" {
             IPNotificationHelper.shared.sendMsg(name: "com.be-huge.insulation-executePuppetEvent");
         }
     }

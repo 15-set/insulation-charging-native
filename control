@@ -1,6 +1,6 @@
 Package: com.be-huge.insulation
 Name: insulation
-Version: 0.0.3
+Version: 0.0.19
 Architecture: iphoneos-arm
 Description: 解除温控，一切从简即可。代码已开源：https://github.com/be-huge/insulation
 Maintainer: be-huge
